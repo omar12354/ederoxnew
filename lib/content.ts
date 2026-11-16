@@ -190,7 +190,7 @@ export const sectors: Sector[] = [
     title: "Zorg & praktijken",
     text: "Digitale telefonie, afsprakenbeheer en efficiëntere administratieve processen.",
     icon: "health",
-    image: null, // bijv. "/images/sectoren/zorg.jpg"
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=85",
     imageAlt: "Medewerker van een zorgpraktijk aan de balie met een tablet",
     needs: [
       "Telefonische bereikbaarheid tijdens drukke spreekuren",
@@ -204,7 +204,7 @@ export const sectors: Sector[] = [
     title: "Zakelijke dienstverlening",
     text: "CRM-systemen, workflowautomatisering en betere klantprocessen.",
     icon: "briefcase",
-    image: null, // bijv. "/images/sectoren/dienstverlening.jpg"
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
     imageAlt: "Adviseurs in overleg aan een vergadertafel",
     needs: [
       "Overzicht over klantrelaties en lopende trajecten",
@@ -218,7 +218,7 @@ export const sectors: Sector[] = [
     title: "Mkb & ondernemingen",
     text: "Software, websites en systeemintegraties die groei ondersteunen.",
     icon: "building",
-    image: null, // bijv. "/images/sectoren/mkb.jpg"
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85",
     imageAlt: "Ondernemer in een werkplaats die een bestelling controleert op een laptop",
     needs: [
       "Een professionele online presentatie die klanten oplevert",
@@ -265,7 +265,7 @@ export const founders: Founder[] = [
 ];
 
 /** Teamfoto voor de hero. Zet op "/images/team/hero.jpg" zodra de foto beschikbaar is. */
-export const heroPhoto: string | null = null;
+export const heroPhoto: string | null = "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85";
 
 /** Keuzehulp */
 export const finderProblems = [
