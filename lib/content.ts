@@ -190,8 +190,8 @@ export const sectors: Sector[] = [
     title: "Zorg & praktijken",
     text: "Digitale telefonie, afsprakenbeheer en efficiëntere administratieve processen.",
     icon: "health",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Medewerker van een zorgpraktijk aan de balie met een tablet",
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85",
+    imageAlt: "Moderne lichte zorgpraktijk met een rustige, professionele inrichting",
     needs: [
       "Telefonische bereikbaarheid tijdens drukke spreekuren",
       "Afspraken plannen, verzetten en herinneringen versturen",
@@ -204,8 +204,8 @@ export const sectors: Sector[] = [
     title: "Zakelijke dienstverlening",
     text: "CRM-systemen, workflowautomatisering en betere klantprocessen.",
     icon: "briefcase",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Adviseurs in overleg aan een vergadertafel",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85",
+    imageAlt: "Modern team werkt samen aan digitale oplossingen",
     needs: [
       "Overzicht over klantrelaties en lopende trajecten",
       "Gestroomlijnde intake, offertes en opvolging",
@@ -218,8 +218,8 @@ export const sectors: Sector[] = [
     title: "Mkb & ondernemingen",
     text: "Software, websites en systeemintegraties die groei ondersteunen.",
     icon: "building",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Ondernemer in een werkplaats die een bestelling controleert op een laptop",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85",
+    imageAlt: "Modern kantoorinterieur voor groeiende ondernemingen",
     needs: [
       "Een professionele online presentatie die klanten oplevert",
       "Systemen die met de organisatie meegroeien",
@@ -265,7 +265,7 @@ export const founders: Founder[] = [
 ];
 
 /** Teamfoto voor de hero. Zet op "/images/team/hero.jpg" zodra de foto beschikbaar is. */
-export const heroPhoto: string | null = "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85";
+export const heroPhoto: string | null = "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&w=1600&q=85";
 
 /** Keuzehulp */
 export const finderProblems = [
