@@ -42,9 +42,15 @@ export default function OnsWerkPage() {
             return (
               <Reveal key={p.slug} delay={(i % 2) * 0.08}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(11_18_38/0.35)]">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-navy">
-                    <Image src={projectPhotos[p.slug]} alt={`Illustratieve foto bij demo: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+                  <div className="relative flex min-h-[230px] items-end overflow-hidden bg-navy p-7 md:p-9">
+                    <Image src={projectPhotos[p.slug]} alt={`Illustratieve foto bij demo: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/45 to-navy/10" />
+                    <div className="relative z-10">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-wide text-white uppercase backdrop-blur-md">
+                        <FlaskConical className="size-3" aria-hidden /> Demonstratieproject
+                      </span>
+                      <h2 className="mt-5 max-w-lg text-2xl font-semibold text-white md:text-3xl">{p.title}</h2>
+                    </div>
                   </div>
                   <div className="flex flex-1 flex-col p-7 md:p-9">
                   <div className="flex flex-wrap items-center gap-2">
@@ -53,7 +59,7 @@ export default function OnsWerkPage() {
                     </span>
                     <span className="rounded-full bg-offwhite px-2.5 py-1 text-[11px] font-medium text-muted">{p.sector}</span>
                   </div>
-                  <h2 className="mt-6 text-2xl font-semibold text-navy">{p.title}</h2>
+
                   <dl className="mt-6 space-y-5">
                     <div>
                       <dt className="text-xs font-semibold tracking-[0.14em] text-muted uppercase">Uitdaging</dt>
