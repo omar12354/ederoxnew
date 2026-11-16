@@ -70,7 +70,7 @@ export function Hero() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease }} className="relative lg:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-[0_40px_80px_-40px_rgb(11_18_38/0.55)] sm:aspect-[5/4] lg:aspect-[4/5] xl:aspect-[5/6]">
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-[32px] border border-white/30 bg-navy shadow-[0_40px_90px_-30px_rgb(11_18_38/0.5)] sm:aspect-[5/4] lg:aspect-[4/5] xl:aspect-[5/6]">
             <motion.div style={{ y, scale }} className="absolute -inset-y-12 inset-x-0">
               <PhotoSlot
                 src={heroPhoto}
@@ -82,6 +82,15 @@ export function Hero() {
                 className="h-full w-full"
               />
             </motion.div>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050914]/85 via-[#050914]/10 to-transparent" />
+            <div className="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/25 bg-[#050914]/45 px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white backdrop-blur-xl">
+              <span className="size-2 rounded-full bg-cyan-300 shadow-[0_0_15px_#67e8f9]" />
+              DIGITAAL VOORUIT
+            </div>
+            <div className="absolute right-7 bottom-20 left-7 text-white">
+              <p className="text-xs font-medium tracking-[0.2em] text-cyan-200 uppercase">Ederox / Digital innovation</p>
+              <p className="mt-3 max-w-sm text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Slimmer werken.<br/>Sterker groeien.</p>
+            </div>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
