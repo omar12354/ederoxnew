@@ -3,19 +3,16 @@ import { cn } from "@/lib/utils";
 
 export function Logo({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
-    <Link
-      href="/"
-      aria-label="Ederox — naar de homepage"
-      className={cn("group inline-flex items-center gap-2 text-[1.35rem] font-semibold tracking-[-0.04em]", dark ? "text-white" : "text-navy", className)}
-    >
-      <span aria-hidden className="relative grid size-7 place-items-center rounded-[9px] bg-accent text-white shadow-[0_6px_18px_-6px_rgb(65_105_255/0.8)] transition-transform duration-500 ease-[var(--ease-premium)] group-hover:rotate-[-8deg]">
-        <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-          <path d="M6 7h12M6 12h8M6 17h12" />
-        </svg>
-      </span>
-      <span>
-        ederox<span className="text-accent">.</span>
-      </span>
+    <Link href="/" aria-label="Ederox — naar de homepage"
+      className={cn("group inline-flex items-center gap-2.5", className)}>
+      <svg aria-hidden viewBox="0 0 64 64" className="size-9 shrink-0 transition-transform duration-500 group-hover:scale-110">
+        <defs><linearGradient id="ederox-mark" x1="0" x2="1" y1="0" y2="0"><stop stopColor="#00D2E8"/><stop offset="1" stopColor="#53F4F5"/></linearGradient></defs>
+        <rect x="5" y="9" width="45" height="10" rx="5" fill="url(#ederox-mark)"/>
+        <rect x="5" y="26" width="29" height="10" rx="5" fill="url(#ederox-mark)"/>
+        <path d="M37 27l14 14" stroke="#0089A6" strokeWidth="9" strokeLinecap="round"/>
+        <path d="M5 47h46v9H5z" fill="url(#ederox-mark)"/>
+      </svg>
+      <span className={cn("text-[1.5rem] font-semibold tracking-[-0.055em]", dark ? "text-white" : "text-navy")}>Ederox</span>
     </Link>
   );
 }
