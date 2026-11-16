@@ -76,9 +76,9 @@ export function Hero() {
                 src={heroPhoto}
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                alt="De drie oprichters van Ederox werken samen aan een laptop"
-                label="Teamfoto van de drie oprichters volgt"
-                requiredFile="public/images/team/hero.jpg"
+                alt="Professioneel team in overleg over digitale oplossingen"
+                label="Samenwerking en technologie"
+                
                 className="h-full w-full"
               />
             </motion.div>
