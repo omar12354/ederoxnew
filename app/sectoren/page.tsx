@@ -25,8 +25,10 @@ export default function SectorenPage() {
             <section key={s.slug} id={s.slug} className="scroll-mt-24 py-12 md:py-16" aria-labelledby={`${s.slug}-title`}>
               <div className="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
                 <Reveal className={i % 2 ? "lg:order-2" : ""}>
-                  <div className="aspect-[4/3] overflow-hidden rounded-[24px]">
+                  <div className="group relative aspect-[4/3] overflow-hidden rounded-[28px] bg-navy shadow-[0_30px_70px_-45px_rgb(11_18_38/0.5)]">
                     <PhotoSlot src={s.image} alt={s.imageAlt} sizes="(min-width: 1024px) 50vw, 100vw" tone={i === 1 ? "dark" : "light"} className="h-full w-full" />
+                    <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/35 to-transparent" />
+                    <span className="absolute bottom-6 left-6 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-xs font-semibold text-white backdrop-blur-md">Digitale kansen voor {s.title.toLowerCase()}</span>
                   </div>
                 </Reveal>
                 <Reveal delay={0.1}>
