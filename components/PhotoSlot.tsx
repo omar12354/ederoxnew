@@ -20,7 +20,7 @@ export function PhotoSlot({ src, alt, monogram, className, priority, sizes = "10
   if (src) {
     return (
       <div className={cn("relative overflow-hidden", className)}>
-        <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className="object-cover" />
+        <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.055]" />
       </div>
     );
   }
