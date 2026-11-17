@@ -7,19 +7,13 @@ import { Reveal } from "@/components/Reveal";
 import { Showcase } from "@/components/home/Showcase";
 import { CtaBand } from "@/components/CtaBand";
 import { demoProjects, getService } from "@/lib/content";
+import { media } from "@/lib/media";
 import { icons } from "@/lib/icons";
 
 export const metadata: Metadata = {
   title: "Ons werk",
   description: "Bekijk voorbeeldprojecten van Ederox: digitale receptie, CRM op maat, systeemkoppelingen en boekingsplatforms.",
   alternates: { canonical: "/ons-werk" },
-};
-
-const projectPhotos: Record<string, string> = {
-  "digitale-receptie": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-  "crm-adviesbureau": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
-  "webshop-koppeling": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85",
-  boekingsplatform: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
 };
 
 export default function OnsWerkPage() {
@@ -42,8 +36,8 @@ export default function OnsWerkPage() {
             return (
               <Reveal key={p.slug} delay={(i % 2) * 0.08}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(11_18_38/0.35)]">
-                  <div className="relative flex min-h-[230px] items-end overflow-hidden bg-navy p-7 md:p-9">
-                    <Image src={projectPhotos[p.slug]} alt={`Sfeerbeeld bij voorbeeldproject: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-90" />
+                  <div className="relative flex min-h-[280px] items-end overflow-hidden bg-navy p-7 md:p-9">
+                    <Image src={media.projects[p.slug as keyof typeof media.projects]} alt={`Sfeerbeeld bij voorbeeldproject: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-85 transition-[transform,opacity] duration-1000 group-hover:scale-110 group-hover:opacity-100" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/45 to-navy/10" />
                     <div className="relative z-10">
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-wide text-white uppercase backdrop-blur-md">
