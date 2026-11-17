@@ -1,3 +1,5 @@
+import { media } from "@/lib/media";
+
 /**
  * Centrale content van de Ederox-website.
  * Pas hier teksten, diensten, sectoren en teamgegevens aan.
@@ -201,8 +203,8 @@ export const sectors: Sector[] = [
     title: "Zorg & praktijken",
     text: "Digitale telefonie, afsprakenbeheer en efficiëntere administratieve processen.",
     icon: "health",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Sfeerbeeld bij de sector zorg en praktijken",
+    image: media.sectors["zorg"],
+    imageAlt: "Modern ingerichte tandartspraktijk met geavanceerde apparatuur",
     needs: [
       "Telefonische bereikbaarheid tijdens drukke spreekuren",
       "Afspraken plannen, verzetten en herinneringen versturen",
@@ -215,8 +217,8 @@ export const sectors: Sector[] = [
     title: "Zakelijke dienstverlening",
     text: "CRM-systemen, workflowautomatisering en betere klantprocessen.",
     icon: "briefcase",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Sfeerbeeld bij de sector zakelijke dienstverlening",
+    image: media.sectors["zakelijke-dienstverlening"],
+    imageAlt: "Zakelijke professionals in een eigentijdse werkruimte",
     needs: [
       "Overzicht over klantrelaties en lopende trajecten",
       "Gestroomlijnde intake, offertes en opvolging",
@@ -229,8 +231,8 @@ export const sectors: Sector[] = [
     title: "Mkb & ondernemingen",
     text: "Software, websites en systeemintegraties die groei ondersteunen.",
     icon: "building",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Sfeerbeeld bij de sector mkb en ondernemingen",
+    image: media.sectors["mkb"],
+    imageAlt: "Licht modern kantoor met stijlvolle werkplekken",
     needs: [
       "Een professionele online presentatie die klanten oplevert",
       "Systemen die met de organisatie meegroeien",
@@ -285,7 +287,7 @@ export const values = [
 ];
 
 /** Teamfoto voor de hero. Zet op "/images/team/hero.jpg" zodra de foto beschikbaar is. */
-export const heroPhoto: string | null = "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85";
+export const heroPhoto: string | null = media.hero;
 
 /** Keuzehulp */
 export const finderProblems = [
