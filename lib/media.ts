@@ -1,31 +1,29 @@
 /**
- * Curated, editorial imagery for Ederox. Real commercial/technology scenes, never
- * presented as Ederox employees or completed client work.
- *
- * Unsplash photo links resolve to original photos and avoid the generic
- * photo IDs previously used across unrelated industries. Shared imagery is
- * intentional only when the same sector appears on two different routes.
+ * Modern, freely usable Pexels editorial photography.
+ * Each photo has its own source ID; images are purely illustrative,
+ * not depictions of Ederox employees, products or existing customers.
+ * Centralized so every page uses the same visual direction.
  */
-const unsplash = (id: string, width = 1600) =>
-  `https://unsplash.com/photos/${id}/download?force=true&w=${width}&q=85`;
+const pexels = (id: number, width = 1600) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
 
 export const media = {
-  hero: unsplash("sXYBmejEK8U", 1600),
+  hero: pexels(34774358, 1600),
   sectors: {
-    zorg: unsplash("pxOQ-P97sA8", 1400),
-    "zakelijke-dienstverlening": unsplash("4uIRzJYYaOE", 1400),
-    mkb: unsplash("xaGFrbbJuAo", 1400),
+    zorg: pexels(31844508, 1400),
+    "zakelijke-dienstverlening": pexels(39219944, 1400),
+    mkb: pexels(33342702, 1400),
   },
   services: {
-    "automatisering-ai": unsplash("wGlgRXVax5c", 1200),
-    "software-op-maat": unsplash("NaqeNu5PGks", 1200),
-    "websites-platforms": unsplash("Mgjum08dZx8", 1200),
-    systeemintegraties: unsplash("lZkRGePI5HA", 1200),
+    "automatisering-ai": pexels(34212896, 1200),
+    "software-op-maat": pexels(36706460, 1200),
+    "websites-platforms": pexels(40857901, 1200),
+    systeemintegraties: pexels(37730211, 1200),
   },
   projects: {
-    "digitale-receptie": unsplash("27zLImvxwV0", 1200),
-    "crm-adviesbureau": unsplash("WrlIRaC9t-A", 1200),
-    "webshop-koppeling": unsplash("Q3xWisdE54Q", 1200),
-    boekingsplatform: unsplash("t2Qwt_ZBYCw", 1200),
+    "digitale-receptie": pexels(33812025, 1200),
+    "crm-adviesbureau": pexels(34804005, 1200),
+    "webshop-koppeling": pexels(33572895, 1200),
+    boekingsplatform: pexels(35203644, 1200),
   },
 } as const;
