@@ -70,7 +70,7 @@ export function Hero() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3, ease }} className="relative lg:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-[0_40px_80px_-40px_rgb(11_18_38/0.55)] sm:aspect-[5/4] lg:aspect-[4/5] xl:aspect-[5/6]">
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-[30px] bg-navy shadow-[0_40px_100px_-40px_rgb(11_18_38/0.65)] sm:aspect-[5/4] lg:aspect-[4/5] xl:aspect-[5/6]">
             <motion.div style={{ y, scale }} className="absolute -inset-y-12 inset-x-0">
               <PhotoSlot
                 src={heroPhoto}
@@ -80,6 +80,12 @@ export function Hero() {
                 className="h-full w-full"
               />
             </motion.div>
+            <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b1226]/90 via-[#0b1226]/15 to-transparent" />
+            <div className="pointer-events-none absolute left-6 top-6 rounded-full border border-white/25 bg-white/15 px-4 py-2 text-[11px] font-semibold tracking-[0.12em] text-white backdrop-blur-xl">TECHNOLOGIE MET IMPACT</div>
+            <div className="pointer-events-none absolute bottom-28 left-7 right-6 sm:bottom-24">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.19em] text-[#a8bdff]">Modern. Slim. Verbonden.</p>
+              <p className="mt-2 max-w-xs text-3xl font-semibold leading-[1.1] tracking-tight text-white sm:text-4xl">De toekomst werkt vandaag.</p>
+            </div>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
