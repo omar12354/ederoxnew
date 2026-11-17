@@ -1,29 +1,21 @@
-/**
- * Modern, freely usable Pexels editorial photography.
- * Each photo has its own source ID; images are purely illustrative,
- * not depictions of Ederox employees, products or existing customers.
- * Centralized so every page uses the same visual direction.
- */
-const pexels = (id: number, width = 1600) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
-
+/** Exact door Ederox goedgekeurde afbeeldingen. Alle bestanden staan lokaal in public/images/ederox/. */
 export const media = {
-  hero: pexels(34774358, 1600),
+  hero: "/images/ederox/hero.webp",
   sectors: {
-    zorg: pexels(31844508, 1400) /* awaiting upload of approved clinic photo */,
-    "zakelijke-dienstverlening": pexels(33827308, 1400),
-    mkb: pexels(8297853, 1400),
+    zorg: "/images/ederox/zorg.webp",
+    "zakelijke-dienstverlening": "/images/ederox/zakelijke-dienstverlening.webp",
+    mkb: "/images/ederox/mkb.webp",
   },
   services: {
-    "automatisering-ai": pexels(17323801, 1200),
-    "software-op-maat": pexels(36706460, 1200),
-    "websites-platforms": pexels(40857901, 1200),
-    systeemintegraties: pexels(37730211, 1200),
+    "automatisering-ai": "/images/ederox/automatisering-ai.webp",
+    "software-op-maat": "/images/ederox/software-op-maat.webp",
+    "websites-platforms": "/images/ederox/websites-platforms.webp",
+    systeemintegraties: "/images/ederox/systeemintegraties.webp",
   },
   projects: {
-    "digitale-receptie": pexels(36169772, 1200),
-    "crm-adviesbureau": pexels(34804005, 1200),
-    "webshop-koppeling": pexels(33572895, 1200),
-    boekingsplatform: pexels(35203644, 1200),
+    "digitale-receptie": "/images/ederox/automatisering-ai.webp",
+    "crm-adviesbureau": "/images/ederox/ons-werk.webp",
+    "webshop-koppeling": "/images/ederox/systeemintegraties.webp",
+    boekingsplatform: "/images/ederox/websites-platforms.webp",
   },
 } as const;
