@@ -12,6 +12,17 @@ export const site = {
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
 };
 
+/**
+ * Bedrijfsgegevens. Vul aan zodra bekend; lege velden worden niet getoond.
+ * Het e-mailadres komt uit NEXT_PUBLIC_CONTACT_EMAIL.
+ */
+export const company = {
+  legalName: "Ederox",
+  kvk: "",
+  address: "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
+};
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Oplossingen", href: "/oplossingen" },
@@ -191,7 +202,7 @@ export const sectors: Sector[] = [
     text: "Digitale telefonie, afsprakenbeheer en efficiëntere administratieve processen.",
     icon: "health",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Medewerker van een zorgpraktijk aan de balie met een tablet",
+    imageAlt: "Sfeerbeeld bij de sector zorg en praktijken",
     needs: [
       "Telefonische bereikbaarheid tijdens drukke spreekuren",
       "Afspraken plannen, verzetten en herinneringen versturen",
@@ -205,7 +216,7 @@ export const sectors: Sector[] = [
     text: "CRM-systemen, workflowautomatisering en betere klantprocessen.",
     icon: "briefcase",
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Adviseurs in overleg aan een vergadertafel",
+    imageAlt: "Sfeerbeeld bij de sector zakelijke dienstverlening",
     needs: [
       "Overzicht over klantrelaties en lopende trajecten",
       "Gestroomlijnde intake, offertes en opvolging",
@@ -219,7 +230,7 @@ export const sectors: Sector[] = [
     text: "Software, websites en systeemintegraties die groei ondersteunen.",
     icon: "building",
     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85",
-    imageAlt: "Ondernemer in een werkplaats die een bestelling controleert op een laptop",
+    imageAlt: "Sfeerbeeld bij de sector mkb en ondernemingen",
     needs: [
       "Een professionele online presentatie die klanten oplevert",
       "Systemen die met de organisatie meegroeien",
@@ -262,6 +273,15 @@ export const founders: Founder[] = [
   { id: "oprichter-1", name: null, role: null, intro: null, linkedin: null, photo: null, photoFile: "public/images/team/oprichter-1.jpg" },
   { id: "oprichter-2", name: null, role: null, intro: null, linkedin: null, photo: null, photoFile: "public/images/team/oprichter-2.jpg" },
   { id: "oprichter-3", name: null, role: null, intro: null, linkedin: null, photo: null, photoFile: "public/images/team/oprichter-3.jpg" },
+];
+
+/** Alleen oprichters met ingevulde naam worden op de website getoond. */
+export const publishedFounders = founders.filter((f) => f.name && f.role);
+
+export const values = [
+  { title: "Helder", text: "We leggen uit wat we doen en waarom, zonder onnodig jargon." },
+  { title: "Praktisch", text: "We kiezen de oplossing die het meeste oplevert, niet de meest ingewikkelde." },
+  { title: "Betrokken", text: "We denken mee als partner en blijven ook na de lancering beschikbaar." },
 ];
 
 /** Teamfoto voor de hero. Zet op "/images/team/hero.jpg" zodra de foto beschikbaar is. */

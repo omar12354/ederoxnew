@@ -9,6 +9,8 @@ import { SolutionFinder } from "@/components/SolutionFinder";
 import { ContactSection } from "@/components/ContactSection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
+import { Reveal } from "@/components/Reveal";
+import { publishedFounders, values } from "@/lib/content";
 
 export default function HomePage() {
   return (
@@ -42,7 +44,21 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-14">
-            <FounderCards />
+            {publishedFounders.length > 0 ? (
+              <FounderCards />
+            ) : (
+              <div className="grid gap-5 md:grid-cols-3">
+                {values.map((v, i) => (
+                  <Reveal key={v.title} delay={i * 0.08}>
+                    <div className="h-full rounded-[22px] border border-line bg-white p-7 md:p-8">
+                      <span className="font-mono text-xs text-accent">0{i + 1}</span>
+                      <h3 className="mt-6 text-2xl font-semibold text-navy">{v.title}</h3>
+                      <p className="mt-2 leading-relaxed text-muted">{v.text}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>

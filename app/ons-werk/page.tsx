@@ -11,7 +11,7 @@ import { icons } from "@/lib/icons";
 
 export const metadata: Metadata = {
   title: "Ons werk",
-  description: "Bekijk demonstratieprojecten van Ederox: digitale receptie, CRM op maat, systeemkoppelingen en boekingsplatforms.",
+  description: "Bekijk voorbeeldprojecten van Ederox: digitale receptie, CRM op maat, systeemkoppelingen en boekingsplatforms.",
   alternates: { canonical: "/ons-werk" },
 };
 
@@ -25,16 +25,16 @@ const projectPhotos: Record<string, string> = {
 export default function OnsWerkPage() {
   return (
     <>
-      <PageHero eyebrow="Ons werk" title="Zo kan technologie er voor jou uitzien." text="Hieronder vind je demonstratieprojecten die laten zien hoe wij typische vraagstukken aanpakken.">
-        <p className="inline-flex max-w-2xl items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+      <PageHero eyebrow="Ons werk" title="Zo kan technologie er voor jou uitzien." text="Een greep uit de oplossingen die wij bouwen, uitgewerkt aan de hand van herkenbare praktijkvoorbeelden.">
+        <p className="inline-flex max-w-2xl items-start gap-3 rounded-2xl border border-line bg-white px-4 py-3 text-sm text-muted">
           <Info className="mt-0.5 size-4 shrink-0" aria-hidden />
           <span>
-            <strong>Let op:</strong> dit zijn demonstratieprojecten met fictieve organisaties. Het zijn geen echte klantcases. Zodra er gepubliceerde klantcases zijn, vind je ze hier.
+            Dit zijn uitgewerkte voorbeeldprojecten met fictieve organisaties, geen klantreferenties. Ze laten zien hoe wij vergelijkbare vraagstukken aanpakken.
           </span>
         </p>
       </PageHero>
 
-      <section className="pb-24" aria-label="Demonstratieprojecten">
+      <section className="pb-24" aria-label="Voorbeeldprojecten">
         <div className="container-x grid gap-5 md:grid-cols-2">
           {demoProjects.map((p, i) => {
             const svc = getService(p.service)!;
@@ -43,20 +43,17 @@ export default function OnsWerkPage() {
               <Reveal key={p.slug} delay={(i % 2) * 0.08}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(11_18_38/0.35)]">
                   <div className="relative flex min-h-[230px] items-end overflow-hidden bg-navy p-7 md:p-9">
-                    <Image src={projectPhotos[p.slug]} alt={`Illustratieve foto bij demo: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-90" />
+                    <Image src={projectPhotos[p.slug]} alt={`Sfeerbeeld bij voorbeeldproject: ${p.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-90" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/45 to-navy/10" />
                     <div className="relative z-10">
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-wide text-white uppercase backdrop-blur-md">
-                        <FlaskConical className="size-3" aria-hidden /> Demonstratieproject
+                        <FlaskConical className="size-3" aria-hidden /> Voorbeeldproject
                       </span>
                       <h2 className="mt-5 max-w-lg text-2xl font-semibold text-white md:text-3xl">{p.title}</h2>
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col p-7 md:p-9">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-amber-800 uppercase">
-                      <FlaskConical className="size-3" aria-hidden /> Demonstratieproject
-                    </span>
                     <span className="rounded-full bg-offwhite px-2.5 py-1 text-[11px] font-medium text-muted">{p.sector}</span>
                   </div>
 

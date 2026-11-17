@@ -12,6 +12,8 @@ import { cn, inSentence } from "@/lib/utils";
 
 type Status = "idle" | "submitting" | "success" | "not_configured" | "error";
 
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
+
 const empty: ContactInput = { naam: "", bedrijf: "", email: "", telefoon: "", oplossing: "", bericht: "", akkoord: false };
 
 export function ContactForm({ dark = false }: { dark?: boolean }) {
@@ -199,15 +201,24 @@ export function ContactForm({ dark = false }: { dark?: boolean }) {
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} role="alert" className="flex gap-3 rounded-xl border border-amber-300/60 bg-amber-50 p-4 text-sm text-amber-900">
                   <Settings2 className="mt-0.5 size-4 shrink-0" aria-hidden />
                   <p>
-                    <strong>Verzending is nog niet geconfigureerd.</strong> Je bericht is <em>niet</em> verstuurd. Het formulier werkt, maar er is nog
-                    geen e-maildienst of webhook gekoppeld (zie README). Probeer het later opnieuw.
+                    <strong>Je bericht kon op dit moment niet worden verstuurd.</strong> Het formulier is tijdelijk niet beschikbaar.
+                    {contactEmail ? (
+                      <> Mail ons gerust direct via <a href={`mailto:${contactEmail}`} className="font-medium underline underline-offset-2">{contactEmail}</a>.</>
+                    ) : (
+                      <> Probeer het later nog eens.</>
+                    )}
                   </p>
                 </motion.div>
               )}
               {status === "error" && (
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} role="alert" className="flex gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
                   <AlertTriangle className="mt-0.5 size-4 shrink-0" aria-hidden />
-                  <p>Er ging iets mis bij het versturen. Controleer je internetverbinding en probeer het opnieuw.</p>
+                  <p>
+                    Er ging iets mis bij het versturen. Controleer je internetverbinding en probeer het opnieuw.
+                    {contactEmail && (
+                      <> Lukt het niet? Mail ons via <a href={`mailto:${contactEmail}`} className="font-medium underline underline-offset-2">{contactEmail}</a>.</>
+                    )}
+                  </p>
                 </motion.div>
               )}
             </AnimatePresence>

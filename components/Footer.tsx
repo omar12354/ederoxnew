@@ -51,7 +51,18 @@ export function Footer() {
                   Stuur ons een bericht
                 </Link>
               </li>
-              <li className="text-white/40">ederox.com</li>
+              <li>
+                <Link href={bookingHref()} className="transition hover:text-white">
+                  Plan een kennismaking
+                </Link>
+              </li>
+              {process.env.NEXT_PUBLIC_CONTACT_EMAIL && (
+                <li>
+                  <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`} className="transition hover:text-white">
+                    {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

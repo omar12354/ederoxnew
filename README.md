@@ -38,35 +38,32 @@ lib/
 public/images/            Foto's (team, sectoren)
 ```
 
-## Wat je nog moet aanleveren
+## Klaar voor livegang
 
-### Foto's
-Er staan nu duidelijk gemarkeerde placeholders. Er worden bewust geen willekeurige personen als oprichters getoond.
+De site bevat geen placeholderteksten meer en kan zo online. Onderdelen die nog niet zijn ingevuld worden automatisch verborgen:
 
-| Bestand                                   | Waar het staat                    | Daarna instellen in `lib/content.ts`        |
-| ----------------------------------------- | --------------------------------- | ------------------------------------------- |
-| `public/images/team/hero.jpg`             | Hero homepage (staand, ±1600×2000) | `heroPhoto = "/images/team/hero.jpg"`       |
-| `public/images/team/oprichter-1..3.jpg`   | Profielkaarten (4:5)               | `founders[i].photo`                         |
-| `public/images/sectoren/zorg.jpg` e.d.    | Sectorkaarten (4:3)                | `sectors[i].image`                          |
+- **Oprichters:** de profielkaarten verschijnen pas zodra in `lib/content.ts` → `founders` een `name` en `role` zijn ingevuld. Tot die tijd tonen Home en Over ons de kernwaarden van Ederox. Zonder foto krijgt een kaart de initialen; een foto zet je in `public/images/team/` en het pad in `photo`.
+- **Bedrijfsgegevens:** vul in `lib/content.ts` → `company` het KvK-nummer en adres in. Ze verschijnen dan automatisch in de privacyverklaring.
+- **Foto's:** de huidige sfeerbeelden komen van Unsplash (`images.unsplash.com`, toegestaan in `next.config.ts`). Eigen foto's kun je in `public/images/` zetten en in `lib/content.ts` of de betreffende component aanpassen.
+- **Ons werk:** toont voorbeeldprojecten met fictieve organisaties, duidelijk als zodanig gemarkeerd. Vervang ze in `lib/content.ts` → `demoProjects` zodra er echte klantcases zijn.
 
-Afbeeldingen worden automatisch geoptimaliseerd (AVIF/WebP, lazy loading) via `next/image`.
-
-### Gegevens van het team
-Vul in `lib/content.ts` → `founders` de **naam, functie, introductie en LinkedIn-URL** in. Lege velden tonen nu "Naam volgt" en dergelijke.
-
-### Privacyverklaring
-`app/privacy/page.tsx` is een concept. Laat hem juridisch controleren en vul de delen tussen [vierkante haken] in (KvK, adres, bewaartermijnen, verwerkers).
+**Checklist voor livegang**
+1. Stel het contactformulier in (Resend of webhook, zie hieronder) en verstuur een testbericht.
+2. Zet `NEXT_PUBLIC_SITE_URL=https://ederox.com` en eventueel `NEXT_PUBLIC_CONTACT_EMAIL` en `NEXT_PUBLIC_BOOKING_URL`.
+3. Laat de privacyverklaring (`app/privacy/page.tsx`) nalezen en vul `company` aan.
+4. Koppel het domein in Vercel.
 
 ## Configuratie (`.env.local`)
 
 | Variabele                 | Doel                                                                 |
 | ------------------------- | -------------------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL`    | Basis-URL voor sitemap, canonical en Open Graph (`https://ederox.com`) |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Optioneel: openbaar e-mailadres (footer, privacyverklaring, alternatief bij formulierstoring) |
 | `NEXT_PUBLIC_BOOKING_URL` | Optioneel: Calendly/Cal.com-link voor "Plan een kennismaking". Leeg = `/contact` |
 | `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` | Contactformulier per e-mail via [Resend](https://resend.com) |
 | `CONTACT_WEBHOOK_URL`     | Contactformulier naar een webhook (Make, Zapier, n8n, CRM)           |
 
-**Contactformulier:** validatie werkt aan client- én serverzijde, met honeypot en een eenvoudige rate limit. Zolang er **geen** Resend-gegevens of webhook zijn ingesteld, geeft de API `503 not_configured` terug. Het formulier zegt dan eerlijk dat het bericht **niet** is verstuurd. Er wordt geen nepbevestiging getoond. Secrets staan alleen server-side (nooit `NEXT_PUBLIC_`).
+**Contactformulier:** validatie werkt aan client- én serverzijde, met honeypot en een eenvoudige rate limit. Zolang er **geen** Resend-gegevens of webhook zijn ingesteld, geeft de API `503 not_configured` terug. Bezoekers zien dan dat hun bericht niet kon worden verstuurd (met het e-mailadres als alternatief, indien ingesteld). Er wordt nooit een nepbevestiging getoond. Secrets staan alleen server-side (nooit `NEXT_PUBLIC_`).
 
 ## Publiceren op ederox.com
 

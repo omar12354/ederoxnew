@@ -15,7 +15,7 @@ const initialDeals: Deal[] = [
   { id: 2, company: "Studio Fictief", contact: "L. de Boer", value: 12500, stage: "Nieuw" },
   { id: 3, company: "Adviesgroep Demo", contact: "M. Visser", value: 9200, stage: "Gesprek" },
   { id: 4, company: "Praktijk Testlaan", contact: "S. Bakker", value: 6400, stage: "Gesprek" },
-  { id: 5, company: "Installatie BV (fictief)", contact: "R. Smit", value: 18000, stage: "Offerte" },
+  { id: 5, company: "Installatiebedrijf Noord", contact: "R. Smit", value: 18000, stage: "Offerte" },
   { id: 6, company: "Logistiek Voorbeeld", contact: "A. Mulder", value: 7600, stage: "Gewonnen" },
 ];
 

@@ -170,7 +170,7 @@ export function PhoneDemo() {
               );
             })}
           </ul>
-          <p className="mt-5 text-[11px] leading-relaxed text-muted">Praktijk, beller en gegevens zijn fictief. Deze demo toont een mogelijke werking.</p>
+          <p className="mt-5 text-[11px] leading-relaxed text-muted">Voorbeeldgesprek met fictieve gegevens.</p>
         </div>
       </div>
     </DemoFrame>

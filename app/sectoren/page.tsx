@@ -26,7 +26,7 @@ export default function SectorenPage() {
               <div className="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
                 <Reveal className={i % 2 ? "lg:order-2" : ""}>
                   <div className="aspect-[4/3] overflow-hidden rounded-[24px]">
-                    <PhotoSlot src={s.image} alt={s.imageAlt} label="Sectorfoto volgt" requiredFile={`public/images/sectoren/${s.slug}.jpg`} sizes="(min-width: 1024px) 50vw, 100vw" tone={i === 1 ? "dark" : "light"} className="h-full w-full" />
+                    <PhotoSlot src={s.image} alt={s.imageAlt} sizes="(min-width: 1024px) 50vw, 100vw" tone={i === 1 ? "dark" : "light"} className="h-full w-full" />
                   </div>
                 </Reveal>
                 <Reveal delay={0.1}>

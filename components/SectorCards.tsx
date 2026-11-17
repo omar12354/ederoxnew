@@ -15,7 +15,7 @@ export function SectorCards() {
             <Link href={`/sectoren#${s.slug}`} className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(11_18_38/0.35)]">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <div className="h-full w-full transition-transform duration-700 ease-[var(--ease-premium)] group-hover:scale-[1.04]">
-                  <PhotoSlot src={s.image} alt={s.imageAlt} label="Sectorfoto volgt" requiredFile={`public/images/sectoren/${s.slug}.jpg`} sizes="(min-width: 768px) 33vw, 100vw" tone={i === 1 ? "dark" : "light"} className="h-full w-full" />
+                  <PhotoSlot src={s.image} alt={s.imageAlt} sizes="(min-width: 768px) 33vw, 100vw" tone={i === 1 ? "dark" : "light"} className="h-full w-full" />
                 </div>
                 <span className="absolute top-4 left-4 grid size-11 place-items-center rounded-xl bg-white/90 text-accent shadow-sm backdrop-blur">
                   <Icon className="size-5" aria-hidden />

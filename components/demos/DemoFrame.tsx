@@ -14,7 +14,7 @@ export function DemoFrame({ title, children, className, actions }: { title: stri
         </div>
         <div className="flex shrink-0 items-center gap-2">
           {actions}
-          <span className="rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-amber-800 uppercase">Demo · fictieve gegevens</span>
+          <span className="rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-amber-800 uppercase">Demo</span>
         </div>
       </div>
       {children}

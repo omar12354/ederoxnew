@@ -77,8 +77,6 @@ export function Hero() {
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 alt="Professioneel team in overleg over digitale oplossingen"
-                label="Samenwerking en technologie"
-                
                 className="h-full w-full"
               />
             </motion.div>

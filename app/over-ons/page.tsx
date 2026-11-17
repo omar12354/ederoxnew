@@ -6,6 +6,7 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
+import { publishedFounders, values } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Over ons",
@@ -13,23 +14,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/over-ons" },
 };
 
-const values = [
-  { title: "Helder", text: "We leggen uit wat we doen en waarom, zonder onnodig jargon." },
-  { title: "Praktisch", text: "We kiezen de oplossing die het meeste oplevert, niet de meest ingewikkelde." },
-  { title: "Betrokken", text: "We denken mee als partner en blijven ook na de lancering beschikbaar." },
-];
 
 export default function OverOnsPage() {
   return (
     <>
       <PageHero eyebrow="Over Ederox" title="Technologie is ons vak. Samenwerken onze kracht." text="Ederox is ontstaan vanuit de overtuiging dat goede technologie niet ingewikkeld hoeft te zijn. Wij combineren technische kennis met een persoonlijke aanpak en bouwen oplossingen die daadwerkelijk waarde toevoegen." />
 
+      {publishedFounders.length > 0 && (
       <section className="pb-24" aria-labelledby="team-title">
         <div className="container-x">
           <SectionHeading id="team-title" eyebrow="Het team" title="De mensen achter Ederox." text="Bij ons werk je direct samen met de oprichters, van het eerste gesprek tot de oplevering en daarna." />
           <div className="mt-12"><FounderCards /></div>
         </div>
       </section>
+      )}
 
       <section className="border-y border-line bg-white py-24 md:py-32" aria-labelledby="missie-title">
         <div className="container-x grid gap-12 lg:grid-cols-12">

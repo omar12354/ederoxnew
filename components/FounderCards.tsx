@@ -1,4 +1,4 @@
-import { founders } from "@/lib/content";
+import { publishedFounders } from "@/lib/content";
 import { PhotoSlot } from "./PhotoSlot";
 import { Reveal } from "./Reveal";
 
@@ -10,38 +10,40 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((p) => p[0])
+    .filter((c) => c === c.toUpperCase())
+    .slice(0, 2)
+    .join("");
+
 export function FounderCards() {
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {founders.map((f, i) => (
+      {publishedFounders.map((f, i) => (
         <Reveal key={f.id} delay={i * 0.08}>
           <article className="group overflow-hidden rounded-[22px] border border-line bg-white">
             <div className="relative aspect-[4/5] overflow-hidden">
               <div className="h-full w-full transition-transform duration-700 ease-[var(--ease-premium)] group-hover:scale-[1.04]">
-                <PhotoSlot src={f.photo} alt={f.name ? `Portret van ${f.name}` : `Portret van oprichter ${i + 1}`} label={`Portret oprichter ${i + 1} volgt`} requiredFile={f.photoFile} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" tone={i % 2 ? "light" : "dark"} className="h-full w-full" />
+                <PhotoSlot src={f.photo} monogram={initials(f.name!)} alt={`Portret van ${f.name}`} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" tone={i % 2 ? "light" : "dark"} className="h-full w-full" />
               </div>
               <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
             <div className="p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className={f.name ? "text-lg font-semibold text-navy" : "text-lg font-semibold text-navy/40"}>{f.name ?? "Naam volgt"}</h3>
-                  <p className="text-sm text-accent">{f.role ?? "Functie volgt"}</p>
+                  <h3 className="text-lg font-semibold text-navy">{f.name}</h3>
+                  <p className="text-sm text-accent">{f.role}</p>
                 </div>
                 {f.linkedin ? (
-                  <a href={f.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn-profiel van ${f.name ?? `oprichter ${i + 1}`}`} className="grid size-10 place-items-center rounded-full text-navy ring-1 ring-line transition hover:bg-accent hover:text-white hover:ring-accent">
+                  <a href={f.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn-profiel van ${f.name}`} className="grid size-10 place-items-center rounded-full text-navy ring-1 ring-line transition hover:bg-accent hover:text-white hover:ring-accent">
                     <LinkedInIcon className="size-4" />
                   </a>
-                ) : (
-                  <span title="LinkedIn-profiel volgt" className="grid size-10 place-items-center rounded-full text-navy/25 ring-1 ring-line ring-dashed">
-                    <LinkedInIcon className="size-4" />
-                    <span className="sr-only">LinkedIn-profiel volgt</span>
-                  </span>
-                )}
+                ) : null}
               </div>
-              <p className={f.intro ? "mt-4 text-sm leading-relaxed text-muted" : "mt-4 text-sm leading-relaxed text-muted/70 italic"}>
-                {f.intro ?? "Korte introductie wordt nog aangevuld."}
-              </p>
+              {f.intro && <p className="mt-4 text-sm leading-relaxed text-muted">{f.intro}</p>}
             </div>
           </article>
         </Reveal>

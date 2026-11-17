@@ -26,7 +26,7 @@ export function ServiceCard({ service, index }: { service: Service; index: numbe
       <Link href={`/oplossingen/${service.slug}`}
         className="relative flex h-full flex-col overflow-hidden rounded-[23px] border border-line bg-white transition-all duration-500 group-hover:-translate-y-1.5 group-hover:border-accent/20 group-hover:shadow-[0_30px_60px_-30px_rgb(11_18_38/0.35)] focus-visible:outline-offset-4">
         <div className="relative flex min-h-[210px] items-end overflow-hidden bg-navy p-7 md:p-8">
-          <Image src={servicePhotos[service.slug]} alt={`Illustratie van ${service.title.toLowerCase()}`}
+          <Image src={servicePhotos[service.slug]} alt={`Sfeerbeeld bij ${inSentence(service.title)}`}
             fill sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover opacity-65 transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:opacity-80" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/65 to-navy/10" />
