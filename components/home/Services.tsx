@@ -10,8 +10,8 @@ export function Services() {
           <SectionHeading
             id="oplossingen-title"
             eyebrow="Onze oplossingen"
-            title="Alles wat jouw bedrijf digitaal verder brengt."
-            text="Van een slim idee tot een compleet digitaal systeem. Wij ontwikkelen oplossingen die aansluiten op jouw bedrijf."
+            title="Technologie voor elke fase van jouw bedrijf."
+            text="Van een technisch knelpunt tot een nieuwe digitale ontwikkeling. We denken mee, adviseren en realiseren oplossingen die bij jouw organisatie passen."
           />
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-2">

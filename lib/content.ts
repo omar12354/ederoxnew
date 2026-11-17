@@ -10,7 +10,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://ederox.com",
   tagline: "Technologie die jouw bedrijf vooruithelpt.",
   description:
-    "Ederox is jouw technologiepartner voor automatisering, software op maat, websites en systeemintegraties. Wij helpen Nederlandse bedrijven slimmer werken en efficiënter groeien.",
+    "Ederox helpt bedrijven bij technologische uitdagingen, digitale ontwikkeling en groei. Van advies en technische vraagstukken tot software, automatisering, websites en systeemintegraties.",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
 };
 
@@ -66,7 +66,7 @@ export const services: Service[] = [
     title: "Automatisering & AI",
     short: "Minder handwerk, slimmere processen.",
     description:
-      "Bespaar tijd, verminder handmatig werk en maak bedrijfsprocessen slimmer met automatisering en kunstmatige intelligentie.",
+      "Maak bedrijfsprocessen slimmer met betrouwbare automatisering. Waar het waarde toevoegt, zetten we ook AI in.",
     intro:
       "Veel teams besteden uren per week aan taken die zich steeds herhalen: gegevens overtypen, telefoontjes doorzetten, standaardmails versturen. Wij brengen in kaart waar die tijd naartoe gaat en automatiseren wat geautomatiseerd kan worden. AI zetten we in waar het echt iets toevoegt, niet omdat het kan.",
     icon: "automation",
@@ -379,5 +379,6 @@ export const demoProjects = [
 export const contactOptions = [
   { value: "", label: "Kies een oplossing" },
   ...services.map((s) => ({ value: s.slug, label: s.title })),
-  { value: "advies", label: "Weet ik nog niet — ik wil advies" },
+  { value: "advies", label: "Ik wil advies over een technologische uitdaging" },
+  { value: "overig", label: "Andere technologische vraag of ontwikkeling" },
 ];

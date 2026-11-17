@@ -15,10 +15,10 @@ export function ContactSection({ headingLevel = "h2" }: { headingLevel?: "h1" | 
         <Reveal className="lg:col-span-5">
           <p className="eyebrow mb-6">Contact</p>
           <H id="contact-title" className="text-[2.25rem] leading-[1.05] font-semibold sm:text-6xl">
-            Toe aan de volgende stap?
+            Waar kunnen we jouw bedrijf mee helpen?
           </H>
           <p className="mt-6 text-lg leading-relaxed text-white/65">
-            Of je nu een concreet project hebt of gewoon wilt ontdekken wat technologie voor jouw bedrijf kan betekenen: wij denken graag met je mee.
+            Loop je tegen een technisch probleem aan, wil je jouw systemen verbeteren of zoek je een partner voor digitale ontwikkeling? Vertel ons wat er speelt. Ook zonder uitgewerkt plan denken we met je mee.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button href={bookingHref()} size="lg" arrow>

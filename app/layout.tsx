@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: "Ederox",
-  keywords: ["automatisering", "software op maat", "website laten maken", "systeemintegraties", "AI voor mkb", "technologiepartner", "digitalisering"],
+  keywords: ["technologiepartner", "technologische uitdagingen", "digitale ontwikkeling", "bedrijfsgroei", "software op maat", "automatisering", "systeemintegraties", "digitalisering", "websites"],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -43,7 +43,7 @@ const jsonLd = {
   url: site.url,
   description: site.description,
   areaServed: "NL",
-  knowsAbout: ["Automatisering", "Kunstmatige intelligentie", "Software op maat", "Websites", "Systeemintegraties"],
+  knowsAbout: ["Digitale transformatie", "Technologisch advies", "Bedrijfsprocessen", "Automatisering", "Software op maat", "Websites", "Systeemintegraties"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

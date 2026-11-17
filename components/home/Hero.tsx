@@ -37,7 +37,7 @@ export function Hero() {
       <div className="container-x relative grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-6 xl:col-span-6">
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }} className="eyebrow mb-7">
-            Jouw partner in technologie
+            Jouw technologiepartner voor groei
           </motion.p>
           <h1 id="hero-title" className="text-[2.6rem] leading-[1.02] font-semibold tracking-[-0.04em] text-navy sm:text-6xl xl:text-[5.1rem]">
             {heading.split(" ").map((word, i) => (
@@ -56,8 +56,8 @@ export function Hero() {
             ))}
           </h1>
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.65, ease }} className="mt-7 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-            Van slimme automatiseringen tot maatwerksoftware en digitale oplossingen. Wij helpen bedrijven slimmer werken,
-            efficiënter groeien en klaar te zijn voor de toekomst.
+            Technische uitdagingen, digitale vernieuwing of plannen om te groeien? Ederox denkt met je mee en ontwikkelt
+            technologische oplossingen die jouw bedrijf verder helpen.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8, ease }} className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button href={bookingHref("/contact#formulier")} size="lg" arrow>
@@ -76,14 +76,14 @@ export function Hero() {
                 src={heroPhoto}
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                alt="Professioneel team in overleg over digitale oplossingen"
+                alt="Moderne glazen kantoorgebouwen gezien vanuit een perspectief omhoog"
                 className="h-full w-full"
               />
             </motion.div>
             <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b1226]/90 via-[#0b1226]/15 to-transparent" />
             <div className="pointer-events-none absolute left-6 top-6 rounded-full border border-white/25 bg-white/15 px-4 py-2 text-[11px] font-semibold tracking-[0.12em] text-white backdrop-blur-xl">TECHNOLOGIE MET IMPACT</div>
             <div className="pointer-events-none absolute bottom-28 left-7 right-6 sm:bottom-24">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.19em] text-[#a8bdff]">Modern. Slim. Verbonden.</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.19em] text-[#a8bdff]">Technologie voor vooruitgang.</p>
               <p className="mt-2 max-w-xs text-3xl font-semibold leading-[1.1] tracking-tight text-white sm:text-4xl">De toekomst werkt vandaag.</p>
             </div>
           </div>

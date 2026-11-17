@@ -126,7 +126,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         </div>
       </section>
 
-      <CtaBand title={`Klaar om te starten met ${inSentence(service.title)}?`} text="Vertel ons over je situatie. In een vrijblijvend gesprek verkennen we samen de mogelijkheden." />
+      <CtaBand title={`Klaar om te starten met ${inSentence(service.title)}?`} text="Vertel ons over je situatie, ook als je vraag verder gaat dan deze dienst. We zoeken samen naar de juiste technologische aanpak." />
 
       <section className="pb-24" aria-labelledby="andere-title">
         <div className="container-x">
