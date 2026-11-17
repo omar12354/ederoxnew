@@ -1,21 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function Logo({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
-    <Link
-      href="/"
-      aria-label="Ederox — naar de homepage"
-      className={cn("group inline-flex items-center gap-2 text-[1.35rem] font-semibold tracking-[-0.04em]", dark ? "text-white" : "text-navy", className)}
-    >
-      <span aria-hidden className="relative grid size-7 place-items-center rounded-[9px] bg-accent text-white shadow-[0_6px_18px_-6px_rgb(65_105_255/0.8)] transition-transform duration-500 ease-[var(--ease-premium)] group-hover:rotate-[-8deg]">
-        <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-          <path d="M6 7h12M6 12h8M6 17h12" />
-        </svg>
-      </span>
-      <span>
-        ederox<span className="text-accent">.</span>
-      </span>
+    <Link href="/" aria-label="Ederox — naar de homepage"
+      className={cn("group inline-flex shrink-0 items-center transition-opacity hover:opacity-85", className)}>
+      {dark ? (
+        <span className="inline-flex items-center gap-2.5">
+          <svg viewBox="0 0 64 64" className="size-8 shrink-0" aria-hidden="true">
+            <rect x="0" y="0" width="64" height="64" rx="16" fill="#4667ff" />
+            <path d="M21 20h24M21 32h17M21 44h24" stroke="#fff" strokeWidth="5.5" strokeLinecap="round"/>
+          </svg>
+          <span className="text-[1.5rem] font-semibold tracking-[-0.055em] text-white">ederox<span className="text-[#7290ff]">.</span></span>
+        </span>
+      ) : (
+        <Image src="/images/ederox-logo.png" alt="Ederox" width={310} height={87}
+          priority className="h-auto w-[142px] object-contain sm:w-[158px]" />
+      )}
     </Link>
   );
 }
